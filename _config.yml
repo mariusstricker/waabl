@@ -1,0 +1,6 @@
+title: Leminbi: Projektdokumentation
+logo: /assets/img/logo.png
+description: Leminbi ist eine virtuelle Ausstellung, die im Rahmen einer Projektarbeit im CAS DMIT der ZB Zürich realisiert wurde. 
+show_downloads: true
+google_analytics:
+theme: jekyll-theme-minimal
