@@ -1,6 +1,8 @@
-title: Minimal theme
-logo: /assets/img/logo.png
-description: Minimal is a theme for GitHub Pages.
+title: 'Leminbi: Projektdokumentation'
+logo: '/assets/img/logo.png'
+description: 'Leminbi ist eine virtuelle Ausstellung mit IIIF-standardisierten Glasdias'
+url: 'https://mariusstricker.github.io'
+base: '/waabl'
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-minimal
