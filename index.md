@@ -2,6 +2,18 @@
 layout: default
 ---
 
+In dieser Projektdokumentation werden die verschiedenen Arbeitsschritte von der Idee einer virtuellen Ausstellung mit IIIF-Images bis zur veröffentlichten Website beschrieben. Die Umsetzung des Projekts basiert auf dem Workflow [Wax](https://minicomp.github.io/wiki/wax/) von [Minicomp]([https://minicomp.github.io/wax/](https://github.com/minicomp/)). 
+
+
+
+
+
+
+
+
+
+
+
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 [Link to another page](./another-page.html).
