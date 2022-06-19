@@ -1,8 +1,6 @@
-remote_theme: 'pages-themes/minimal@v0.2.0'
-
-title: 'Leminbi: Projektdokumentation'
-logo: '/assets/img/logo.png'
-description: 'Leminbi ist eine virtuelle Ausstellung, die im Rahmen einer Projektarbeit im CAS DMIT der ZB Zürich realisiert wurde.' 
+title: Minimal theme
+logo: /assets/img/logo.png
+description: Minimal is a theme for GitHub Pages.
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-minimal
