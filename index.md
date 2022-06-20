@@ -35,12 +35,12 @@ Bei ersten Requirement-Checks und Installationsversuchen hat sich relativ rasch 
 ```js
 (base) marius@WN128567:/mnt/c/Users/marius.stricker/OneDrive - PHZH/Desktop
 ```
-Die beiden Commands
+Die beiden Commands:
 ```
-> sudo apt install bundler #ruby gem
+> sudo apt install bundler        #ruby gem
 ```
 ```
-> sudo apt install libvips-tools #fast image processing library
+> sudo apt install libvips-tools  #fast image processing library
 ```
 erzeugten wiederholt unlösbare Probleme. So dass ich das angelegte Projekt auf das Laufwerk C: verschob und den Installationsprozess erneut begann. Vermutlich hätte OneDrive später tatsächlich Probleme erzeugt, aber für die Installation führte nicht OneDrive zu Fehlermeldungen, sondern weil die Commands nicht auf Betriebssystemebene (globally) ausgeführt wurden. 
 
