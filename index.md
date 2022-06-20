@@ -35,10 +35,10 @@ Bei ersten Requirement-Checks und Installationsversuchen hat sich relativ rasch 
 ```
 Die beiden Commands:
 ```
-> sudo apt install bundler        _#ruby gem_
+> sudo apt install bundler        # ruby gem
 ```
 ```
-> sudo apt install libvips-tools  _#fast image processing library_
+> sudo apt install libvips-tools  # fast image processing library
 ```
 erzeugten wiederholt unlösbare Probleme. So dass ich das angelegte Projekt auf das Laufwerk C: verschob und den Installationsprozess erneut begann. Vermutlich hätte OneDrive später tatsächlich Probleme erzeugt, aber für die Installation führte nicht OneDrive zu Fehlermeldungen, sondern weil die Commands nicht auf Betriebssystemebene (globally) ausgeführt wurden. 
 
@@ -46,12 +46,12 @@ erzeugten wiederholt unlösbare Probleme. So dass ich das angelegte Projekt auf 
 Nach Anpassung des Directory und den wiederholten Installationen wurden bei der Überprüfung die korrekten Versionen ausgegeben:
 
 ```
-> ruby -v             _#ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-linux-gnu]_
-> bundler -v          _#Bundler version 2.1.4_
-> git –version        _#git version 2.25.1_
-> convert -version    _#GraphicsMagick 1.3.35_
-> gs -version         _#hostscript 9.50 (2019-10-15)_
-> vips -version       _#vips-8.9.1 (Laufwerk C :)_
+> ruby -v             # ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-linux-gnu]
+> bundler -v          # Bundler version 2.1.4
+> git –version        # git version 2.25.1
+> convert -version    # GraphicsMagick 1.3.35
+> gs -version         # hostscript 9.50 (2019-10-15)
+> vips -version       # vips-8.9.1 (Laufwerk C :)
 
 ```
 
@@ -86,8 +86,8 @@ Dafür wird das Git-Repository [Wax](https://github.com/minicomp/wax) in den eig
 
 VS Code Terminal
 ```
-> git clone                           _#anschliessend ins Repository wechseln_
-> bundle exec rake wax:clobber qatar  _#löscht alle Files aus den Directories qatar und img/derivatives (oder manuell)_
+> git clone                           # anschliessend ins Repository wechseln_
+> bundle exec rake wax:clobber qatar  # löscht alle Files aus den Directories qatar und img/derivatives (oder manuell)_
 ```
 ```
 > alle Qatar-Files aus _data löschen
@@ -101,15 +101,15 @@ VS Code Terminal
 VS Code Terminal, Repository
 
 ```
-> bundle exec rake –tasks                             _#Übersicht aller wax:tasks_
-> bundle exec rake wax:derivatives:iiif Glasdiashow   _#generiert IIIF-Derivatives: fügt im Metadaten-File die Felder _full_, _thumbnail_, _manifest_ hinzu und schreibt für jedes Objekt mit PID entsprechende Inhalte aus den JSON-Dateien_ 
+> bundle exec rake –tasks                             # Übersicht aller wax:tasks_
+> bundle exec rake wax:derivatives:iiif Glasdiashow   # generiert IIIF-Derivatives: fügt im Metadaten-File die Felder full, thumbnail, manifest hinzu und schreibt für jedes Objekt mit PID entsprechende Inhalte aus den JSON-Dateien
 ```
 
 > Rechenzeit für 20 Images von je 14 Megabyte circa 2.5h
 
 ```
-> bundle exec rake wax:pages Glasdiashow              _#erstellt im lokalen Repository ein Directory mit _Glasdiashow #schreibt pro Objekt je ein Markdown-File mit Daten aus dem Metadaten-File für die spätere Repräsentation von Images/Metadaten im Viewer OpenSeadragon_
-> bundle exec rake wax:search                         _@schreibt einen JSON-Index anhand der Markdown-Files der Objekte_
+> bundle exec rake wax:pages Glasdiashow              # erstellt im lokalen Repository ein Directory mit _Glasdiashow #schreibt pro Objekt je ein Markdown-File mit Daten aus dem Metadaten-File für die spätere Repräsentation von Images/Metadaten im Viewer OpenSeadragon
+> bundle exec rake wax:search                         # schreibt einen JSON-Index anhand der Markdown-Files der Objekte
 ```
 
 
@@ -119,7 +119,7 @@ VS Code Terminal, Repository
 Die Projektwebsite ist nun (fast) bereit, um online zu gehen, zuvor gibt es aber noch ausführliche Tests mit der Online-Seite über den lokalen Server (localhost:4000).
 
 ```
-> bundle exec jekyll serve    _#erstellt im lokalen Repository das Directory site_
+> bundle exec jekyll serve    # erstellt im lokalen Repository das Directory site
 ```
 Das site-Directory enthält:
 *   Index-File (HTML) für die Homepage und für die 404-Seite
@@ -133,7 +133,7 @@ Das site-Directory enthält:
 
 
 
-> **Aber die Website konnte nicht geladen werden.**
+> **Aber: die Website konnte nicht geladen werden.**
 
 
 
@@ -185,11 +185,11 @@ Nachdem alle Bugs ausgemerzt wurden, folgten Vorbereitung für und Onlinepublish
 ```
 Mit Git Bash Terminal
 ```
-> cd c/leminbi          _#lokales Repository ansteuern_
-> git init [URL-Rep]    _#aktiviert Verbindung von lokale zu remote_
-> git add .             _#bereitet alle abweichenden oder neuen Files lokal für den Upload vor_
-> git commit            _#öffnet den Editor (VS Code), Überprüfen der neuen/geänderten Files_
-> git push origin main  _#erweitert/ändert das Git-Repository_
+> cd c/leminbi          # lokales Repository ansteuern
+> git init [URL-Rep]    # aktiviert Verbindung von lokale zu remote
+> git add .             # bereitet alle abweichenden oder neuen Files lokal für den Upload vor
+> git commit            # öffnet den Editor (VS Code), Überprüfen der neuen/geänderten Files
+> git push origin main  # erweitert/ändert das Git-Repository
 ```
 
 Zwei nützliche Manuals für Git Bash [hier](https://www.atlassian.com/de/git/tutorials/syncing) und [hier](https://git-scm.com/docs/user-manual).
@@ -224,7 +224,7 @@ Hätte ich das Wax Wiki vor Beginn gründlich und vollständig durchgelesen, wä
 
 
 
-
+_aber_
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
