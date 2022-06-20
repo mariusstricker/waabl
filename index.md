@@ -52,7 +52,6 @@ Nach Directory-Change und den erneuten Installationen wurden bei der Überprüfu
 > convert -version    # GraphicsMagick 1.3.35
 > gs -version         # hostscript 9.50 (2019-10-15)
 > vips -version       # vips-8.9.1 (Laufwerk C :)
-
 ```
 
 
@@ -131,9 +130,7 @@ Das site-Directory enthält:
 > _config.yml > _site > assets > Index > …
 
 
-
-> **Aber: die Website konnte nicht geladen werden.**
-
+**Aber: die Website konnte in einem ersten Anlauf trotz allem _nicht_ geladen werden.**
 
 
 #### Fehleranalyse (2)
