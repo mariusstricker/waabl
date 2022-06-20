@@ -90,9 +90,9 @@ VS Code Terminal
 > bundle exec rake wax:clobber qatar  _#löscht alle Files aus den Directories qatar und img/derivatives (oder manuell)_
 ```
 ```
-*   alle Qatar-Files aus _data löschen
-*   Image Collection und Metadaten im Repository hinterlegen
-*   Anpassen des _config.yml-File (Dokumentation im Wiki)
+> alle Qatar-Files aus _data löschen
+> Image Collection und Metadaten im Repository hinterlegen
+> Anpassen des _config.yml-File (Dokumentation im Wiki)
 ```
 
 
