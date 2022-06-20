@@ -2,7 +2,7 @@
 layout: default
 ---
 
-In dieser Projektdokumentation werden die verschiedenen Arbeitsschritte von der Idee einer virtuel-len Ausstellung mit IIIF-Images bis zur veröffentlichten Website beschrieben. Die Umsetzung des Projekts basiert auf dem Workflow [Wax](https://minicomp.github.io/wiki/wax/) von [Minicomp](https://github.com/minicomp/), sämtliche Files befinden sich im Repositorium Leminbi auf GitHub, die Projektwebsite enthält ergänzende Informationen.
+In dieser Projektdokumentation werden die verschiedenen Arbeitsschritte von der Idee einer virtuellen Ausstellung mit IIIF-Images bis zur veröffentlichten Website beschrieben. Die Umsetzung des Projekts basiert auf dem Workflow [Wax](https://minicomp.github.io/wiki/wax/) von [Minicomp](https://github.com/minicomp/), sämtliche Files befinden sich im Repositorium Leminbi auf GitHub, die Projektwebsite enthält ergänzende Informationen.
 
 
 ## Projektziel
