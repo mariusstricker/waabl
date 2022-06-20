@@ -37,22 +37,22 @@ Bei ersten Requirement-Checks und Installationsversuchen hat sich relativ rasch 
 ```
 Die beiden Commands:
 ```
-> sudo apt install bundler        #ruby gem
+> sudo apt install bundler        _#ruby gem
 ```
 ```
-> sudo apt install libvips-tools  #fast image processing library
+> sudo apt install libvips-tools  _#fast image processing library
 ```
 erzeugten wiederholt unlösbare Probleme. So dass ich das angelegte Projekt auf das Laufwerk C: verschob und den Installationsprozess erneut begann. Vermutlich hätte OneDrive später tatsächlich Probleme erzeugt, aber für die Installation führte nicht OneDrive zu Fehlermeldungen, sondern weil die Commands nicht auf Betriebssystemebene (globally) ausgeführt wurden. 
 
 Nach Anpassung des Directory und den wiederholten Installationen wurden bei der Überprüfung die korrekten Versionen ausgegeben:
 
 ```
-> ruby -v 				    #ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-linux-gnu]
-> bundler -v			    #Bundler version 2.1.4
-> git –version			  #git version 2.25.1
-> convert -version    #GraphicsMagick 1.3.35
-> gs -version         #hostscript 9.50 (2019-10-15)
-> vips -version       #vips-8.9.1 (Laufwerk C :)
+> ruby -v             _#ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-linux-gnu]
+> bundler -v          _#Bundler version 2.1.4
+> git –version        _#git version 2.25.1
+> convert -version    _#GraphicsMagick 1.3.35
+> gs -version         _#hostscript 9.50 (2019-10-15)
+> vips -version       _#vips-8.9.1 (Laufwerk C :)
 
 ```
 
@@ -85,8 +85,8 @@ Dafür wird das Git-Repository [Wax](https://github.com/minicomp/wax) in den eig
 
 VS Code Terminal
 ```
-*   git clone                           #anschliessend ins Repository wechseln
-*   bundle exec rake wax:clobber qatar  #löscht alle Files aus den Directories _qatar und img/derivatives (oder manuelll)
+*   git clone                           _#anschliessend ins Repository wechseln
+*   bundle exec rake wax:clobber qatar  _#löscht alle Files aus den Directories _qatar und img/derivatives (oder manuelll)
 
 ```
 ```
@@ -100,16 +100,16 @@ VS Code Terminal
 VS Code Terminal, Repository
 
 ```
-* bundle exec rake –tasks                             #Übersicht aller wax:tasks
-* bundle exec rake wax:derivatives:iiif Glasdiashow   #generiert IIIF-Derivatives: JSON-Manifeste mit Image- und Präsentations-API, URI, Image Tiles und JSON-Dokumente für jedes Image pro Einheit (Canvas, Annotation und Sequence)
-                                                      #fügt im Metadaten-File drei zusätzliche Felder (full, thumbnail, manifest) hinzu und schreibt für jedes Objekt mit PID entsprechende Inhalte aus den JSON-Dateien 
+* bundle exec rake –tasks                             _#Übersicht aller wax:tasks
+* bundle exec rake wax:derivatives:iiif Glasdiashow   _#generiert IIIF-Derivatives: JSON-Manifeste mit Image- und Präsentations-API, URI, Image Tiles und JSON-Dokumente für jedes Image pro Einheit (Canvas, Annotation und Sequence)
+                                                      _#fügt im Metadaten-File drei zusätzliche Felder (full, thumbnail, manifest) hinzu und schreibt für jedes Objekt mit PID entsprechende Inhalte aus den JSON-Dateien 
 ```
 ```
 Rechenzeit für 20 Images von je 14 Megabyte circa 2.5h
 ```
 ```
-> bundle exec rake wax:pages Glasdiashow              #erstellt im lokalen Repository ein Directory mit _Glasdiashow #schreibt pro Objekt je ein Markdown-File mit Daten aus dem Metadaten-File für die spätere Repräsentation von Images/Metadaten im Viewer OpenSeadragon
-> bundle exec rake wax:search                         #schreibt einen JSON-Index anhand der Markdown-Files der Objekte
+> bundle exec rake wax:pages Glasdiashow              _erstellt im lokalen Repository ein Directory mit _Glasdiashow #schreibt pro Objekt je ein Markdown-File mit Daten aus dem Metadaten-File für die spätere Repräsentation von Images/Metadaten im Viewer OpenSeadragon
+> bundle exec rake wax:search                         _schreibt einen JSON-Index anhand der Markdown-Files der Objekte
 ```
 
 ### Website testen
@@ -117,18 +117,20 @@ Rechenzeit für 20 Images von je 14 Megabyte circa 2.5h
 Die Projektwebsite ist nun (fast) bereit, um online zu gehen, zuvor gibt es aber noch ausführliche Tests mit der Online-Seite über den lokalen Server (localhost:4000).
 
 ```
-> bundle exec jekyll serve                            #erstellt im lokalen Repository das Directory _site
+> bundle exec jekyll serve                            _#erstellt im lokalen Repository das Directory _site
 ```
-Das site-Directory enthält
+Das site-Directory enthält:
 *   Index-File (HTML) für die Homepage und für die 404-Seite
 *   pro Seite/Unterseite je ein HTML-File (28) 
 *   Directory img mit den IIIF-Files (JSON)  #dupliziert aus Repository
 *   Directory assets mit den Booting- und Style-Files (.js, .min, .css, .min.js) #dupliziert aus Repository
 
+```
 Der Prozess zum Aufbauen der Website: > _config.yml > _site > assets > Index > …
-
+```
 
 **Aber die Website konnte nicht geladen werden.**
+
 
 #### Fehleranalyse (2)
 Der Workflow sieht leider keine vollständige File-Kontrolle vor den wax:tasks vor, was sehr nützlich wäre, und so konnte ich erst bei den Website-Tests feststellen, dass das File fehlerhaft war und somit auch fehlerhafte JSON- und Markdown-Files geschrieben wurden. 
@@ -176,11 +178,11 @@ Nachdem alle Bugs ausgemerzt wurden, folgten Vorbereitung für und Onlinepublish
 ```
 Mit Git Bash Terminal
 ```
-> cd c/leminbi          #lokales Repository ansteuern
-> git init https://github.com/mariusstricker/leminbi.git #aktiviert Verbindung von lokale zu remote
-> git add .             #bereitet alle abweichenden oder neuen Files lokal für den Upload vor
-> git commit            #öffnet den Editor (VS Code), Überprüfen der neuen/geänderten Files
-> git push origin main  #erweitert/ändert das Git-Repository
+> cd c/leminbi          _#lokales Repository ansteuern
+> git init [URL-Rep]    _#aktiviert Verbindung von lokale zu remote
+> git add .             _#bereitet alle abweichenden oder neuen Files lokal für den Upload vor
+> git commit            _#öffnet den Editor (VS Code), Überprüfen der neuen/geänderten Files
+> git push origin main  _#erweitert/ändert das Git-Repository
 ```
 
 Zwei nützliche Manuals für Git Bash [hier](https://www.atlassian.com/de/git/tutorials/syncing) und [hier](https://git-scm.com/docs/user-manual).
@@ -194,11 +196,13 @@ Anfänglich gewöhnungsbedürftig ist die Tatsache, dass auf Git Page das für d
 [https://mariusstricker.github.io/leminbi/](https://mariusstricker.github.io/leminbi/)  
 
 
+
 ## Weiterentwicklung
 *   Sammlung erweitern mit weiteren Pflanzendias, wobei nicht ganz klar ist, ob es dafür sinnvoller ist, einen komplett neuen Workflow mit separatem Repository und namensidentischer Collection durchzugehen, oder einfach das Metadaten-File mit neuen Objektmetadaten zu ergänzen und nur die wax:tasks abzuwickeln; letzteres könnte fehlerbehaftet sein, Begründung: gemäss Wax Wiki ist die strikte Einhaltung der Taskreihenfolge elementar.
 *    Objektmetadaten optimieren, z.B. über Informationen aus botanischer Klassifikation und Verlinkung auf entsprechende Onlineressourcen
 *    Websitedesign optimieren
 *    Hyperlinkpfad definieren und implementieren, damit die Objekte in weiteren Image Viewern/Editoren geöffnet werden können (Mirador, Annonatate)
+
 
 
 ## Persönliches Fazit
